@@ -1,0 +1,30 @@
+using System;
+namespace Testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = int.Parse(Console.ReadLine());
+            int op = 10000;
+            int f = 12000;
+            int n = 11000;
+            int a = 10000;
+
+            if (x <= 10)
+            {
+                Console.WriteLine(x * f + op);
+            }
+            else if (x <= 20)
+            {
+                Console.WriteLine((10 * f) + op + (x - 10) * n);
+            }
+            else
+            {
+                if (x > 30)
+        Console.WriteLine((10 * f) + op + (n * 10) + (x - 20) * a);
+            }
+        }
+    }
+}
+

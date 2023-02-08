@@ -1,0 +1,31 @@
+using System;
+
+namespace SecondLargestNumber
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] tokens = Console.ReadLine().Split();
+            int num1 = int.Parse(tokens[0]);
+            int num2 = int.Parse(tokens[1]);
+            int num3 = int.Parse(tokens[2]); ;
+            int secondLargest = GetSecondLargest(num1, num2, num3);
+            Console.WriteLine(secondLargest);           
+        }
+        static int GetSecondLargest(int num1, int num2, int num3)
+        {
+            int largest = Math.Max(num1, Math.Max(num2, num3));
+            int secondLargest;
+
+            if (largest == num1)
+                secondLargest = Math.Max(num2, num3);
+            else if (largest == num2)
+                secondLargest = Math.Max(num1, num3);
+            else
+                secondLargest = Math.Max(num1, num2);
+
+            return secondLargest;
+        }
+    }
+}

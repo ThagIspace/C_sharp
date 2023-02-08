@@ -1,0 +1,50 @@
+using System;
+namespace IF05_NGAY_THANG_NAM
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] tokens = Console.ReadLine().Split();
+            int a = int.Parse(tokens[0]);
+            int b = int.Parse(tokens[1]);
+            int c = int.Parse(tokens[2]);
+
+            if (c > 3000 && c < 0)
+            Console.WriteLine("NO");
+            else
+            {
+                if (b == 1|| b == 3|| b == 5|| b == 7|| b == 8|| b == 10|| b == 12)
+                {
+                    if (a <= 31 && a > 0)
+                    Console.WriteLine("YES");
+                    else
+                    Console.WriteLine("NO");
+                }
+                else if (b == 4|| b == 6|| b == 9|| b == 11)
+                {
+                    if (a <= 30 && a > 0)
+                    Console.WriteLine("YES");
+                    else
+                    Console.WriteLine("NO");
+                }
+                else if (b == 2)
+                {
+                    if (a > 0 && a <= 28)
+                    Console.WriteLine("YES");
+                    else if ((c % 400 == 0) || (c % 4 == 0 && c % 100 != 0))
+                    {
+                        if (a > 0 && a <= 29)
+                        Console.WriteLine("YES");
+                        else
+                        Console.WriteLine("NO");
+                    }
+                    else
+                    Console.WriteLine("NO");
+                }
+                else              
+                    Console.WriteLine("NO");               
+            }
+        }
+    }
+}

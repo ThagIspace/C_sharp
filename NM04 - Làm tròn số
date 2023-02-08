@@ -1,0 +1,11 @@
+using System;
+public class Study
+{
+    static void Main(string[] argn)
+    {
+        double a = double.Parse(Console.ReadLine());
+        string s1 = a.ToString("F3");
+        Console.WriteLine(s1);
+
+    }
+}

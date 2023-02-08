@@ -1,0 +1,29 @@
+using System;
+namespace Testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            String[] tokens = Console.ReadLine().Split();
+            int A = int.Parse(tokens[0]);
+            int B = int.Parse(tokens[1]);
+            int C = int.Parse(tokens[2]);
+            if (A + B > C && B + C > A && C + A > B)
+            {
+                if (A == B && B == C)
+                    Console.WriteLine("tam giac deu");
+
+                else if (A == B || A == C || C == B)
+                    Console.WriteLine("tam giac can");
+  
+                else if ((B * B + C * C == A * A) || (B * B == A * A + C * C) || (C * C == A * A + B * B))
+                    Console.WriteLine("tam giac vuong");
+                
+                else
+                    Console.WriteLine("tam giac thuong");
+            }
+        }
+    }
+}

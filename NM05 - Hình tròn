@@ -1,0 +1,17 @@
+using System;
+public class Study
+{
+    static void Main(string[] argn)
+    {
+        double d = double.Parse(Console.ReadLine());
+        double r = d / 2;
+        double pi = 3.14;
+        double P = 2 * pi * r; //(P = CV)
+        double A = pi * r * r; // (A = S)
+        string s1 = P.ToString("F2");
+        string s2 = A.ToString("F2");
+        Console.WriteLine(s1);
+        Console.WriteLine(s2);
+
+    }
+}

@@ -1,0 +1,25 @@
+using System;
+namespace Testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double d = double.Parse(Console.ReadLine());            
+            if(d >= 9){
+                Console.WriteLine("Gioi");
+            }
+            else if (d >= 7){
+                 Console.WriteLine("Kha");
+            }
+            else
+            {
+                if (d >= 5)
+                     Console.WriteLine("TB");                   
+                else 
+                     Console.WriteLine("Yeu");
+            }         
+        }
+    }
+}
+        

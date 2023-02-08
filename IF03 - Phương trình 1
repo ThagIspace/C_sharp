@@ -1,0 +1,21 @@
+using System;
+public class Study
+{
+    static void Main(string[] argn)
+    {
+          string[] input = Console.ReadLine().Split(' ');
+        int a = int.Parse(input[0]);
+        int b = int.Parse(input[1]);
+        if (a == 0){
+            if (b == 0)          
+                Console.WriteLine("vo so nghiem");
+            else 
+                Console.WriteLine("vo nghiem");
+        }
+        else {
+            double x = -(double)b/a;
+            string s1 = x.ToString("F2");
+            Console.WriteLine(s1);
+        }
+    }
+}

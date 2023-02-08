@@ -1,0 +1,15 @@
+using System;
+public class Study
+{
+    static void Main(string[] argn)
+    {
+        int n = int.Parse(Console.ReadLine());
+        int a = n / 100 % 10;
+        int b = (n / 10) % 10;
+        int c = n % 10;
+
+        Console.WriteLine(a);
+        Console.WriteLine(b);
+        Console.WriteLine(c);
+    }
+}
