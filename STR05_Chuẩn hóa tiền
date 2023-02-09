@@ -1,0 +1,25 @@
+using System;
+
+namespace StandardizeMoney
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string money = Console.ReadLine();
+            int length = money.Length;
+            string standardizedMoney = "";
+
+            for (int i = 0; i < length; i++)
+            {
+                standardizedMoney = money[length - i - 1] + standardizedMoney;
+                if ((i + 1) % 3 == 0 && i != length - 1)
+                {
+                    standardizedMoney = "." + standardizedMoney;
+                }
+            }
+
+            Console.WriteLine(standardizedMoney);
+        }
+    }
+}
