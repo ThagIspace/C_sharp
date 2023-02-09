@@ -1,0 +1,23 @@
+using System;
+
+
+class CountString
+{
+    static void Main(string[] args)
+    {       
+        string s = Console.ReadLine();
+        int count, i;
+        i = 0;
+        count = 1;
+
+        while (i <= s.Length - 1)
+        {        
+            if (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+            {
+                count++;
+            }
+            i++;
+        }
+        Console.WriteLine(count);       
+    }
+}
