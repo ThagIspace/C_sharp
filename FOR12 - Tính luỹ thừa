@@ -1,0 +1,16 @@
+using System;
+public class Program
+{
+    static void Main(string[] argn)
+    {
+        string[] inputs = Console.ReadLine().Split();
+        int a = int.Parse(inputs[0]);
+        int n = int.Parse(inputs[1]);
+        long result = 1;
+        for(;n > 0; n--)
+        {
+            result *= a;
+        }
+        Console.WriteLine(result);
+    }
+}
