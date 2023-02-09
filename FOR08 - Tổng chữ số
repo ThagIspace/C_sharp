@@ -4,10 +4,9 @@ class Program{
         int n = int.Parse(Console.ReadLine());
         int m,sum = 0;
         
-        while(n > 0){         
+        for(;n != 0; n = n / 10){
             m = n % 10;
-            sum += m; //sum = sum + m 
-            n = n / 10;
+            sum += m;
         }
         Console.WriteLine(sum);        
     }
