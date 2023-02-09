@@ -1,0 +1,14 @@
+using System;
+class Program{
+    static void Main(string[] argn){
+        int n = int.Parse(Console.ReadLine());
+        int m,sum = 0;
+        
+        while(n > 0){
+            n = n / 10;
+            m = n % 10;
+            sum += m; //sum = sum + m           
+        }
+        Console.WriteLine(sum);        
+    }
+}
