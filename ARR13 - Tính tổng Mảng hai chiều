@@ -1,0 +1,33 @@
+using System;
+public class Program
+{
+    static void Main(string[] args)
+    {
+        int m, n;
+        string[] tokens = Console.ReadLine().Split();
+        m = int.Parse(tokens[0]);
+        n = int.Parse(tokens[1]);
+        int[,] arr = new int[m, n];
+        for (int i = 0; i < m; i++)
+        {
+            tokens = Console.ReadLine().Split();
+            for (int j = 0; j < n; j++)
+            {
+                arr[i, j] = int.Parse(tokens[j]);
+            }
+        }
+
+        int sum = 0;
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (arr[i, j] % 2 == 0)
+                {
+                    sum += arr[i, j];
+                }
+            }
+        }
+        Console.WriteLine(sum);
+    }
+}
