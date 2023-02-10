@@ -1,0 +1,23 @@
+using System;
+namespace NormalizeString
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            string output = NormalizeString(input);
+            Console.WriteLine(output);
+        }
+
+        static string NormalizeString(string input)
+        {
+            input = input.Trim();
+            while (input.Contains("  "))
+            {
+                input = input.Replace("  ", " ");
+            }
+            return input;
+        }
+    }
+}
