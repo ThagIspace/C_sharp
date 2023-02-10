@@ -1,0 +1,27 @@
+using System;
+
+namespace CaesarCipher
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Nhập chuỗi ban đầu
+            string inputString = Console.ReadLine();
+            // Nhập giá trị k
+            int k = int.Parse(Console.ReadLine());
+
+            // Mã hoá chuỗi
+            string encryptedString = "";
+            foreach (char character in inputString)
+            {
+                int charValue = (int)character;
+                int newValue = (charValue + k - 65) % 26 + 65;
+                encryptedString += (char)newValue;
+            }
+
+            // In chuỗi đã mã hoá
+            Console.WriteLine(encryptedString);
+        }
+    }
+}
